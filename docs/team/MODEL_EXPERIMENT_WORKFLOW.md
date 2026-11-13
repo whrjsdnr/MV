@@ -4,6 +4,10 @@
 
 ## 단계별 완료 조건
 
+**최신 확정 입력 전략(v2)**: 이상탐지는 승인 Crop 후 모델별 Resize/Normalize, 객체탐지는 실제 원본 전체 H/W 후 모델별 Resize/LetterBox/Normalize다. D1 결함 기준선과 D2 제품+결함 확장은 서로 다른 experiment_id와 클래스 매핑을 쓴다. D2 제품/결함 mAP는 분리하며 Pseudo 제품 박스를 독립 GT로 평가하지 않는다. [v2 데이터 README](../data/README_DATA_TEMPLATE.md)와 TeamReleaseV2를 따른다. 아래 v1 hash/설명은 이전 배포 이력으로, 새 실험은 v2 release.json의 canonical_sha256을 Recorder에 기록한다.
+
+데이터 준비는 새 [팀 ZIP 계약](../data/MANIFEST_SCHEMA.md)과 [로더 연결](../data/DATA_LOADER_GUIDE.md)을 우선한다. `MV_TEAM_DATA_RELEASE_v1.zip`과 새 도구 ZIP을 내부 수령하고 verify/smoke를 통과한 뒤 시작한다. 기존 v1 적격성 표를 재사용하지 않는다. 공통 Recorder의 manifest_sha256에는 통합 canonical SHA `a4e0c603539b7e9146c9d12abc2af5f551dda32e63b7bd45a763ddb19cc41833`을 기록한다. 기본 검출에서 OK는 빈 결함 BBox, NG 미주석/빈 마스크는 제외다. 제품 GT와 Crop 근사 박스는 별도 확장 실험에만 사용한다. 주석을 참고한 Test Crop 189건의 독립성 한계를 결과에 명시한다. 이번 변경은 모델 학습 구현을 추가하지 않는다.
+
 | 단계 | 담당자가 하는 일 | 다음 단계로 가는 조건/남길 증거 |
 |---|---|---|
 | 0. 공통 데이터 고정 | 관리자 승인 Canonical Manifest/라벨/class-map 수령 | 파일별 SHA-256, 정책/클래스 버전, v2 검증 범위 기록 |

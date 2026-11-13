@@ -5,6 +5,7 @@ WSL2 Ubuntu, Python 3.12, uv, CPU PyTorch를 기본으로 메타데이터·밝�
 ## 처음 읽는 팀원 안내
 
 - **[현재 진행 상태와 다음 작업](docs/team/PROJECT_STATUS.md)**: 분석·재검수·로더가 어디까지 완료됐는지, 지금 남은 검증과 담당 작업.
+- **[팀 데이터 ZIP 수령·계약·검증](#팀-데이터-zip-수령과-공통-계약)**: 최종 검수 v2와 클래스 보정이 합쳐진 동일 데이터로 실험 시작.
 - **[팀원 시작하기 — GitHub Fork 사용자](#팀원-시작하기--github-fork-사용자)**: 아래 빠른 시작.
 - [Fork 상세 실습](docs/team/GITHUB_FORK_WORKFLOW.md) · [설치/로더 체크리스트](docs/team/ONBOARDING_CHECKLIST.md) · [기여 규칙](docs/team/CONTRIBUTING.md)
 - **[공통 실험·평가 규약](docs/experiments/EXPERIMENT_PROTOCOL.md)** · [모델별 담당 TODO](models/README.md)
@@ -12,6 +13,44 @@ WSL2 Ubuntu, Python 3.12, uv, CPU PyTorch를 기본으로 메타데이터·밝�
 - [오류 복구](docs/team/TROUBLESHOOTING.md) · [관리자 PR/Canonical 배포](docs/team/MAINTAINER_GUIDE.md)
 
 현재 공통 Single/Five-view 로더와 12개 독립 입력 Adapter가 구현됐다. 12개 모델 학습 통합/성능 비교는 아직 실행하지 않았다. `models/`에는 이번에 모델별 계약·TODO 인터페이스를 추가했으며 실제 학습 코드는 아직 없다. 공통 실험 인프라는 `mv_analysis/experiments/`에 있다.
+
+## 팀 데이터 ZIP 수령과 공통 계약
+
+**최신 v2: 이상탐지는 승인 Crop, 객체탐지는 원본 전체 이미지를 사용합니다.**
+
+|실험|입력|Target|
+|---|---|---|
+|이상탐지 6종|원본 → 승인 Crop → 모델 Resize/Normalize|Train OK, 이상 점수/히트맵. 품목/시점으로 정상 기준 선택|
+|D1 결함 탐지 기준선|원본 실제 H/W 전체 → 모델 Resize/LetterBox/Normalize|결함 8클래스만. OK는 빈 결함 객체|
+|D2 제품+결함 확장|원본 실제 H/W 전체 → 모델 Resize/LetterBox/Normalize|제품 30클래스 + 결함 8클래스. 제품 출처/품질 구분|
+
+D1/D2는 별도 experiment_id·클래스 매핑·평가 결과를 사용합니다. 제품 mAP와 결함 mAP를 섞지 않습니다. OK/NG는 이미지 상태이고 `normal` 객체 클래스를 추가하지 않습니다. NG 미주석은 결함 UNKNOWN이며 D2 제품 박스가 있어도 일반 통합 학습의 빈 Negative로 넣지 않습니다.
+
+관리자에게 **MV_TEAM_DATA_RELEASE_v2.zip + MV_TEAM_DATA_TOOLS_v2.zip + SHA-256**을 팀 내부 채널로 받습니다. v1 ZIP은 보존합니다. 이번 새 도구는 Commit/Push하지 않았으므로 Fork 동기화만으로 설치되지 않습니다. TOOLS ZIP 설치기는 기존 공통 코드 해시를 확인하고 새 파일만 설치합니다. v1 도구가 이미 수정된 폴더이면 덮어쓰지 않고 거부하므로 별도 깨끗한 코드 복사본 또는 검토된 diff로 통합합니다.
+
+MV 루트에서 실행합니다. ZIP 경로를 바꾸고 새 출력 폴더를 사용합니다.
+
+```bash
+uv sync --locked
+uv run --locked pytest -q tests/test_team_data_release.py tests/test_team_data_release_v2.py
+export REALIAD_DATA_ROOT="/본인/Real-IAD/루트"
+uv run --locked python scripts/team_data_release.py verify \
+  --zip /받은경로/MV_TEAM_DATA_RELEASE_v2.zip \
+  --sha256 39acd673b0042e5b626a8e84fa25f0d1190db02b56f6f1dded4b5c8886dada43 \
+  --extract-to outputs/team_data_received_v2
+export MV_DATA_RELEASE="$PWD/outputs/team_data_received_v2/MV_TEAM_DATA_RELEASE_v2"
+uv run --locked python scripts/team_data_release.py smoke --release "$MV_DATA_RELEASE"
+```
+
+고정 환경→합성 검사→원본 루트→ZIP 해제/계약 검사→실제 표본 로딩입니다. `VERIFIED`와 오류 없음으로 확인합니다. 데이터/해시/좌표가 틀리면 중단하고 관리자에게 전달하며 자동 보정하지 않습니다. 원본 데이터는 Git Clone에 포함되지 않습니다.
+
+- [v2 배포 README](docs/data/README_DATA_TEMPLATE.md): TeamReleaseV2의 anomaly/D1/D2 실행 예제, YOLO/COCO export, 정상/미주석 처리.
+- [스키마](docs/data/MANIFEST_SCHEMA.md) · [로더 연결](docs/data/DATA_LOADER_GUIDE.md) · [실제 검증 결과와 한계](reports/TEAM_DATA_RELEASE_VALIDATION.md).
+- v2 Canonical SHA-256: `98cd47086afc939fc960b92e32ee70f38a13cfde54df71b7a54b5d68aa0222ed`.
+- 전체 151,050장 / 30,210 선언 제품 / 결함 BBox60,636개. 43장 재검수와 기존 Split·승인 좌표는 보존했습니다.
+- Train 적격: 이상탐지 50,930장, D1 87,077장, D2 통합 87,077장. 제품만 감독 가능한 105,735장과 D2 통합 적격 수는 다릅니다.
+- 사람 제품 GT600개는 모두 Val/Test의 개발 자료입니다. Train 제품 주석은 모두 Crop 근사이며, 독립 제품 평가 적격은 0입니다. Pseudo를 실제 GT로 평가하지 않습니다.
+- 원본 JPG/PNG·가중치·승인 Ledger·개인 경로는 ZIP/GitHub에 넣지 않습니다. 큰 Manifest와 ZIP은 내부 전달합니다. Test 주석 참조 Crop189건과 PENDING1건은 별도 기록합니다.
 
 ## 공통 실험·평가·Markdown 보고 시스템
 
@@ -91,7 +130,7 @@ export REALIAD_DATA_ROOT="/본인/Real-IAD/루트"
 
 합성 Smoke는 외부 데이터 없이 Single/Five-view·마스크 상태·12개 입력 변환을 확인한다. [코드 배포·Canonical 수령 안내](docs/team/CODE_RELEASE.md)를 참고한다.
 
-**데이터와 전체 Crop CSV는 Clone으로 내려오지 않는다.** 팀이 승인한 Canonical Manifest·annotation·BBox·classes를 별도로 수령하고 hash를 대조한다. 최신 갱신 Crop은 reviewed_v2이며 검증 범위는 [진행 상태](docs/team/PROJECT_STATUS.md)에 명시했다. 실제 [데이터 검증·로더 실행 예제](docs/team/ONBOARDING_CHECKLIST.md)를 따라 개인 data_root로 로드한다. 기존 v1 eligibility를 새 v2 검증 결과로 혼동하지 않는다.
+**데이터와 전체 Crop CSV는 Clone으로 내려오지 않는다.** 위 v2 팀 데이터 ZIP을 별도로 수령하고 hash를 대조한다. 최신 배포 canonical은 reviewed_v2 좌표와 파일명 클래스 보정에 이상탐지 Crop/검출 원본 정책 및 새 eligibility를 고정했다. [배포 로더 가이드](docs/data/DATA_LOADER_GUIDE.md)를 따라 개인 data_root로 로드한다. 과거 crop-only v1/v2 파일의 SHA와 새 통합 canonical SHA를 구분한다.
 
 ### 3. 매일 동기화 → 새 브랜치
 
