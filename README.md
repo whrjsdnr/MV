@@ -8,7 +8,7 @@ WSL2 Ubuntu, Python 3.12, uv, CPU PyTorch를 기본으로 메타데이터·밝�
 
 이 저장소는 데이터 분석·전처리·모델 학습·추론·퓨전 평가를 담당한다. DB·API·에이전트·3D GUI·팀 공유는 자매 저장소 **[real-iad-inspection-agent](https://github.com/whrjsdnr/real-iad-inspection-agent)**(Private)가 담당한다.
 
-- **데이터**: 30품목·24,000제품·120,000시점(C1~C5). split train 16,797 / validation 3,610 / test 3,593(학습 중복 UNKNOWN 명시).
+- **데이터**: 30품목·24,000제품·120,000시점(C1~C5). split train 16,797 / validation 3,610 / test 3,593. 통합 추론 코호트는 RT-DETRv2·HVQ-Trans 학습에 사용되지 않았다(훈련 담당자 확인).
 - **최종 모델**: HVQ-Trans(`hvq_best.pt`, 79ep, 이상탐지) + RT-DETRv2(`epoch_0015.pt`, 15ep EMA, 640×640, 불량검출).
 - **확정 퓨전 계약 v2**: `0.7×RT_norm + 0.3×HVQ_norm`(HVQ=heatmap_mean 연속 점수, RT conf 0.4 미만 0), Validation 품목별 min-max, 제품 점수=C1~C5 최댓값, 품목별 Val F1 최적 TH±margin(F1 하락 0.005).
 - **성능(저장 점수 재평가)**: Test 3,593제품 Recall 95.3210%(1,752/1,838), F1 0.953210, FP/FN 86/86, AUROC 0.986346. 전체 24,000 참고 F1 0.968780(Val 포함). 구 max16/백분위 규칙(Test F1 0.942795)보다 전 범위에서 상승.
