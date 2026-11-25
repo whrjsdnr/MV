@@ -113,13 +113,25 @@ class CropReviewStore(ReviewStore):
   with self.write_lock():
    states=self.snapshot();approvals={r['case_id']:r for r in states.values() if r['status']=='APPROVED_CROP'}
    if hashlib.sha256(self.base_metadata.read_bytes()).hexdigest()!=self.base_hash:raise ReviewError('Base metadata changed',409)
-   d=pd.read_csv(self.base_metadata,keep_default_na=False);d['crop_review_status']='UNREVIEWED_BASELINE';d['crop_reviewer']='';d['crop_reviewed_utc']='';d['manual_annotation_assisted']=False;d['requires_evaluation_leakage_review']=False;d['geometric_gain_definition']='SQRT_ORIGINAL_AREA_OVER_CROP_AREA';d['manual_crop_warning']=''
+   d=pd.read_csv(self.base_metadata,keep_default_na=False)
+   # 자동 적용 CSV 위에서 일부만 재검수해도 이전 사람 승인/정답 참조 이력을 지우지 않는다.
+   defaults=dict(crop_review_status='UNREVIEWED_BASELINE',crop_reviewer='',crop_reviewed_utc='',
+    manual_annotation_assisted=False,requires_evaluation_leakage_review=False,
+    geometric_gain_definition='SQRT_ORIGINAL_AREA_OVER_CROP_AREA',manual_crop_warning='')
+   for name,value in defaults.items():
+    if name not in d.columns:d[name]=value
    for i,r in d.iterrows():
     e=approvals.get(r.image_id)
     if not e:continue
     if e['image_path']!=r.source_relative_path or e['source_fingerprint']!=r.source_fingerprint:raise ReviewError('Approval source mismatch',409)
     x0,y0,x1,y1=pixel_crop(e['crop_xyxy']);full=[x0,y0,x1,y1]==[0,0,int(r.original_width),int(r.original_height)]
     fields=dict(crop_x0=x0,crop_y0=y0,crop_x1=x1,crop_y1=y1,crop_width=x1-x0,crop_height=y1-y0,full_frame=full,geometric_gain=math.sqrt(r.original_width*r.original_height/((x1-x0)*(y1-y0))),selected_policy='C' if full else 'HUMAN_CROP',quality_status='HUMAN_APPROVED_WITH_WARNING' if e['preview_evaluation']['requires_risk_ack'] else 'HUMAN_APPROVED_CROP',fallback_reason='HUMAN_CONFIRMED_FULL_FRAME' if full else '',policy_version=str(r.policy_version)+'+human-override-v1',policy_sha256=hashlib.sha256((str(r.policy_sha256)+self.revision(e)).encode()).hexdigest(),processing_status='OK_HUMAN_CROP_REVIEW',crop_review_status='APPROVED_CROP',manual_crop_warning='HUMAN_ACKNOWLEDGED_LOSS_OR_UNVERIFIED_REGION' if e['preview_evaluation']['requires_risk_ack'] else '',crop_reviewer=e['reviewer'],crop_reviewed_utc=e['reviewed_utc'],manual_annotation_assisted=e['preview_evaluation']['annotation_assisted'],requires_evaluation_leakage_review=r.split=='test' and e['preview_evaluation']['annotation_assisted'])
+    # 재구성 CSV의 선택/감사 요약도 새 승인과 일치시킨다. 다른 행의 승인 기록은 유지한다.
+    for key,value in dict(crop_policy=fields['selected_policy'],approved_crop_present=True,
+     selection_provenance='LATEST_EXPLICIT_HUMAN_CROP_APPROVAL',manual_review_required=False,
+     human_observed_loss_acknowledged=bool(e.get('risk_ack') and e['preview_evaluation'].get('observed_loss')),
+     manual_review_reasons='',crop_target_audit_status='HUMAN_PREVIEW_CHECKED_REAUDIT_AFTER_EXPORT').items():
+     if key in d.columns:fields[key]=value
     for key,value in fields.items():d.at[i,key]=value
    d['gain_x']=d.original_width/d.crop_width;d['gain_y']=d.original_height/d.crop_height
    directory=Path(directory) if directory else self.base_metadata.parent;directory.mkdir(exist_ok=True)
