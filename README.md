@@ -1,10 +1,13 @@
 # MV — Real-IAD 5시점 제조 외관검사
 
+> Crop CSV 적용 범위와 수동 재검수 반영 여부는 [현재 Crop 메타데이터 상태](docs/data/CROP_METADATA_CURRENT_STATUS.md)를 확인하세요. 전수 좌표 생성과 전수 자동 Crop 실행은 구분합니다.
+
 WSL2 Ubuntu, Python 3.12, uv, CPU PyTorch를 기본으로 메타데이터·밝기·불량 위치·객체 라벨·원본 JPG 해상도 손실을 분석한다. 원본은 읽기 전용으로 사용하고 결과는 실행별 outputs 폴더에 보관한다. 이 분석 경로는 모델 학습을 수행하지 않는다. 모델 실험 준비 절차는 아래 별도 가이드를 따른다.
 
 ## 처음 읽는 팀원 안내
 
 - **[현재 진행 상태와 다음 작업](docs/team/PROJECT_STATUS.md)**: 분석·재검수·로더가 어디까지 완료됐는지, 지금 남은 검증과 담당 작업.
+- **[6개 모델 자동 학습 시스템 진행 현황](docs/experiments/TRAINING_IMPLEMENTATION_PROGRESS.md)** · [공통 실행기 사용법](docs/experiments/TRAINING_RUNNER_GUIDE.md): 설정·Dry Run·합성 Smoke·재개 계약. 실제 모델 학습 백엔드는 아직 미구현입니다.
 - **[팀 데이터 ZIP 수령·계약·검증](#팀-데이터-zip-수령과-공통-계약)**: 최종 검수 v2와 클래스 보정이 합쳐진 동일 데이터로 실험 시작.
 - **[팀원 시작하기 — GitHub Fork 사용자](#팀원-시작하기--github-fork-사용자)**: 아래 빠른 시작.
 - [Fork 상세 실습](docs/team/GITHUB_FORK_WORKFLOW.md) · [설치/로더 체크리스트](docs/team/ONBOARDING_CHECKLIST.md) · [기여 규칙](docs/team/CONTRIBUTING.md)
@@ -230,3 +233,11 @@ python3 scripts/inventory_dataset.py --data-root "$REALIAD_DATA_ROOT"
 
 
 해상도 전수 결과의 재집계: [상세 Markdown](reports/RESOLUTION_DETAILED_ANALYSIS.md), [파일 목록·한계·회의 결정 사항](reports/RESOLUTION_DELIVERY_GUIDE.md). 회의용 최종 PDF `reports/RESOLUTION_TEAM_MEETING_FINAL.pdf`는 Git 배포 대상이 아니므로 관리자에게 별도로 수령한다. 기존 151,050장 결과를 재사용했으며 전체 해상도 계산을 반복하지 않았다. 그래프·집계 CSV는 Git에서 제외된 outputs/resolution_detail_20261111_v2/에 있다.
+
+### Owner CPU 학습 (EfficientAD-S · RetinaNet · YOLO11)
+
+50 epoch · batch 1로 순차 실행: `uv run --offline python scripts/experiments/run_owner_cpu.py`
+
+입력/가중치/복구/보고서 위치는 [Owner CPU 실행 가이드](docs/experiments/OWNER_CPU_TRAINING.md)를 참고하세요.
+모델별 코드는 `models/anomaly/efficientad_s/`, `models/detection/retinanet/`, `models/detection/yolo11/`에 있습니다.
+실제 50 epoch 학습은 명령을 실행하는 시점에 시작합니다.
