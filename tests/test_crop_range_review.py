@@ -125,3 +125,19 @@ def test_loader_findings_filtered_review_preserves_full_export_and_history(store
  assert len(store.ledger.read_text().splitlines())==1
  out=filtered.export();assert len(pd.read_csv(out['path']))==2
  assert store.base_metadata.exists()
+
+
+def test_partial_review_export_preserves_other_existing_human_approval(store,tmp_path):
+ """새 위험 큐의 일부만 승인해도 기존 승인된 다른 행의 검수자를 지우지 않는다."""
+ d=pd.read_csv(store.base_metadata)
+ d['crop_review_status']=['UNREVIEWED','APPROVED_CROP'];d['crop_reviewer']=['','previous-human']
+ d['crop_reviewed_utc']=['','2026-11-17T00:00:00Z']
+ d.to_csv(store.base_metadata,index=False)
+ q=pd.read_csv(store.proposals);q['base_manifest_sha256']=hashlib.sha256(store.base_metadata.read_bytes()).hexdigest()
+ queue=tmp_path/'new_queue.csv';q.to_csv(queue,index=False)
+ new=CropReviewStore(queue,tmp_path,store.base_metadata,tmp_path/'new_ledger.jsonl')
+ p=payload(new,[100,100,900,900]);p['preview_receipt']=new.preview(p)['preview_receipt'];new.approve(p)
+ exported=pd.read_csv(new.export()['path'])
+ assert exported.iloc[1].crop_review_status=='APPROVED_CROP'
+ assert exported.iloc[1].crop_reviewer=='previous-human'
+ assert exported.iloc[1].crop_reviewed_utc=='2026-11-17T00:00:00Z'
