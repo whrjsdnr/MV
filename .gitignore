@@ -102,3 +102,14 @@ models/**/checkpoints/
 models/**/memory_bank/
 models/**/search_index/
 models/**/memory_bank*.npy
+
+# ==========================================
+# Local heavyweight caches (kept out of Git)
+# ==========================================
+/inference/
+/hvq_outputs/
+/rtdetr_outputs/
+/real-iad-backup/
+/environments/
+*Zone.Identifier
+/reports/PREPROCESSING_REVIEW_PACKAGE.zip
