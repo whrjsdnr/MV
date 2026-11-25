@@ -6,7 +6,7 @@ WSL2 Ubuntu, Python 3.12, uv, CPU PyTorch를 기본으로 메타데이터·밝�
 
 ## 프로젝트 최종 결과 요약
 
-이 저장소는 데이터 분석·전처리·모델 학습·추론·퓨전 평가를 담당한다. DB·API·에이전트·3D GUI·팀 공유는 자매 저장소 `~/agent`가 담당한다.
+이 저장소는 데이터 분석·전처리·모델 학습·추론·퓨전 평가를 담당한다. DB·API·에이전트·3D GUI·팀 공유는 자매 저장소 **real-iad-inspection-agent**(`~/agent`, GitHub Private 업로드 예정)가 담당한다.
 
 - **데이터**: 30품목·24,000제품·120,000시점(C1~C5). split train 16,797 / validation 3,610 / test 3,593(학습 중복 UNKNOWN 명시).
 - **최종 모델**: HVQ-Trans(`hvq_best.pt`, 79ep, 이상탐지) + RT-DETRv2(`epoch_0015.pt`, 15ep EMA, 640×640, 불량검출).
