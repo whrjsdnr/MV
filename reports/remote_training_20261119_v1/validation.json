@@ -1,0 +1,29 @@
+{
+  "model_reports": 12,
+  "metric_rows": 73,
+  "view_metric_rows": 365,
+  "evidence_snapshot": "2026-11-19T08:15:59.013736+00:00",
+  "new_training_executed": false,
+  "gpu_benchmark": false,
+  "existing_backups_modified": false,
+  "model_inference_actual": [
+    "efficientad_s",
+    "retinanet",
+    "yolo11",
+    "faster_rcnn"
+  ],
+  "actual_model_reports": 12,
+  "markdown_missing_links": [],
+  "inference_png_valid": 8,
+  "unit_tests_passed": 8,
+  "unit_tests_failed": 0,
+  "full_regression_not_executed": true,
+  "sha_checks": 55,
+  "sha_mismatches": 0,
+  "remote_refresh_utc": "2026-11-19T09:03:33.489485+00:00",
+  "related_regression_tests_passed": 40,
+  "combined_tests_passed": 48,
+  "combined_tests_failed": 0,
+  "actual_cpu_inference_images": 8,
+  "actual_cpu_inference_models": 4
+}

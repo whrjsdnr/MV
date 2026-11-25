@@ -1,0 +1,562 @@
+{
+  "validation": {
+    "task": "detection",
+    "split": "validation",
+    "data_kind": "SYNTHETIC",
+    "protocol_sha256": "582a7377118d32cb2b0397e5416211702445796d92deb4aaf11086d3a4decab7",
+    "threshold_policy": {
+      "image": null,
+      "pixel": null,
+      "pixel_score_range": null,
+      "detection": 0.9,
+      "source_split": "validation",
+      "validation_ids_sha256": "9656b3b87e552a6329eb9168389e6b536b517ad05487ea37ce4a9955372fae7b",
+      "validation_product_hashes": [
+        "099839915e7e8b336e4b307312d03e4bff1c5fddaa07eab64b87e4ddfca5f71d",
+        "360c513abd54367dbe6804143d2cc2aae50baf063e1a11ec299eeb8cbeaa41af"
+      ],
+      "protocol_sha256": "582a7377118d32cb2b0397e5416211702445796d92deb4aaf11086d3a4decab7",
+      "data_kind": "SYNTHETIC"
+    },
+    "evaluation_ids_sha256": "9656b3b87e552a6329eb9168389e6b536b517ad05487ea37ce4a9955372fae7b",
+    "images": 10,
+    "evaluated_images": 8,
+    "exclusions": [
+      {
+        "image_id": "validation_NG_C4",
+        "reason": "MISSING_ANNOTATION"
+      },
+      {
+        "image_id": "validation_NG_C5",
+        "reason": "EMPTY_NG_REVIEW"
+      }
+    ],
+    "evaluation_coverage_sha256": "c8d81b7adab5f644ac6ef0fa5c152c3b785bca203d10e51d6b3cf05d28750843",
+    "evaluated_image_ids": [
+      "validation_NG_C1",
+      "validation_NG_C2",
+      "validation_NG_C3",
+      "validation_OK_C1",
+      "validation_OK_C2",
+      "validation_OK_C3",
+      "validation_OK_C4",
+      "validation_OK_C5"
+    ],
+    "map50": 0.6633663366336634,
+    "map50_95": 0.6633663366336634,
+    "per_class": {
+      "AK": {
+        "class_id": 0,
+        "ap": 0.6633663366336634,
+        "ap50": 0.6633663366336634,
+        "recall": 0.6666666666666667
+      },
+      "BX": {
+        "class_id": 1,
+        "ap": null,
+        "ap50": null,
+        "recall": null
+      }
+    },
+    "engine": "pycocotools.COCOeval",
+    "max_dets": 100,
+    "area": "all",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "tp": 2,
+    "fp": 1,
+    "fn": 1,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "counts_by_class": {
+      "0": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8
+      },
+      "1": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "per_image": [
+      {
+        "image_id": "validation_NG_C1",
+        "category": "synthetic_product",
+        "view": "C1",
+        "tp_indices": [
+          0
+        ],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_NG_C2",
+        "category": "synthetic_product",
+        "view": "C2",
+        "tp_indices": [],
+        "fp_indices": [
+          0
+        ],
+        "fn_indices": [
+          0
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      {
+        "image_id": "validation_NG_C3",
+        "category": "synthetic_product",
+        "view": "C3",
+        "tp_indices": [
+          0
+        ],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_OK_C1",
+        "category": "synthetic_product",
+        "view": "C1",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_OK_C2",
+        "category": "synthetic_product",
+        "view": "C2",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_OK_C3",
+        "category": "synthetic_product",
+        "view": "C3",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_OK_C4",
+        "category": "synthetic_product",
+        "view": "C4",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "validation_OK_C5",
+        "category": "synthetic_product",
+        "view": "C5",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    ],
+    "confusion": {
+      "labels": [
+        "AK",
+        "BX",
+        "BACKGROUND"
+      ],
+      "matrix": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "axes": "rows=GT,columns=prediction"
+    },
+    "by_category": {
+      "synthetic_product": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "n": 8
+      }
+    },
+    "by_view": {
+      "C1": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n": 2
+      },
+      "C2": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 2
+      },
+      "C3": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n": 2
+      },
+      "C4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1
+      },
+      "C5": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1
+      }
+    }
+  },
+  "test": {
+    "task": "detection",
+    "split": "test",
+    "data_kind": "SYNTHETIC",
+    "protocol_sha256": "582a7377118d32cb2b0397e5416211702445796d92deb4aaf11086d3a4decab7",
+    "threshold_policy": {
+      "image": null,
+      "pixel": null,
+      "pixel_score_range": null,
+      "detection": 0.9,
+      "source_split": "validation",
+      "validation_ids_sha256": "9656b3b87e552a6329eb9168389e6b536b517ad05487ea37ce4a9955372fae7b",
+      "validation_product_hashes": [
+        "099839915e7e8b336e4b307312d03e4bff1c5fddaa07eab64b87e4ddfca5f71d",
+        "360c513abd54367dbe6804143d2cc2aae50baf063e1a11ec299eeb8cbeaa41af"
+      ],
+      "protocol_sha256": "582a7377118d32cb2b0397e5416211702445796d92deb4aaf11086d3a4decab7",
+      "data_kind": "SYNTHETIC"
+    },
+    "evaluation_ids_sha256": "0741432c0f78bdd68090fb0790bf835c76bc5acf4c67f452fee55f53697202d2",
+    "images": 10,
+    "evaluated_images": 8,
+    "exclusions": [
+      {
+        "image_id": "test_NG_C4",
+        "reason": "MISSING_ANNOTATION"
+      },
+      {
+        "image_id": "test_NG_C5",
+        "reason": "EMPTY_NG_REVIEW"
+      }
+    ],
+    "evaluation_coverage_sha256": "0f6a54d47cf19ae0419d33658f1cdbc4a87f0521760cdaf7c2ef04bd425eec60",
+    "evaluated_image_ids": [
+      "test_NG_C1",
+      "test_NG_C2",
+      "test_NG_C3",
+      "test_OK_C1",
+      "test_OK_C2",
+      "test_OK_C3",
+      "test_OK_C4",
+      "test_OK_C5"
+    ],
+    "map50": 0.6633663366336634,
+    "map50_95": 0.6633663366336634,
+    "per_class": {
+      "AK": {
+        "class_id": 0,
+        "ap": 0.6633663366336634,
+        "ap50": 0.6633663366336634,
+        "recall": 0.6666666666666667
+      },
+      "BX": {
+        "class_id": 1,
+        "ap": null,
+        "ap50": null,
+        "recall": null
+      }
+    },
+    "engine": "pycocotools.COCOeval",
+    "max_dets": 100,
+    "area": "all",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "tp": 2,
+    "fp": 1,
+    "fn": 1,
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "counts_by_class": {
+      "0": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8
+      },
+      "1": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "per_image": [
+      {
+        "image_id": "test_NG_C1",
+        "category": "synthetic_product",
+        "view": "C1",
+        "tp_indices": [
+          0
+        ],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_NG_C2",
+        "category": "synthetic_product",
+        "view": "C2",
+        "tp_indices": [],
+        "fp_indices": [
+          0
+        ],
+        "fn_indices": [
+          0
+        ],
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      {
+        "image_id": "test_NG_C3",
+        "category": "synthetic_product",
+        "view": "C3",
+        "tp_indices": [
+          0
+        ],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_OK_C1",
+        "category": "synthetic_product",
+        "view": "C1",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_OK_C2",
+        "category": "synthetic_product",
+        "view": "C2",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_OK_C3",
+        "category": "synthetic_product",
+        "view": "C3",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_OK_C4",
+        "category": "synthetic_product",
+        "view": "C4",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image_id": "test_OK_C5",
+        "category": "synthetic_product",
+        "view": "C5",
+        "tp_indices": [],
+        "fp_indices": [],
+        "fn_indices": [],
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    ],
+    "confusion": {
+      "labels": [
+        "AK",
+        "BX",
+        "BACKGROUND"
+      ],
+      "matrix": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "axes": "rows=GT,columns=prediction"
+    },
+    "by_category": {
+      "synthetic_product": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "n": 8
+      }
+    },
+    "by_view": {
+      "C1": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n": 2
+      },
+      "C2": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 2
+      },
+      "C3": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "n": 2
+      },
+      "C4": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1
+      },
+      "C5": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "n": 1
+      }
+    }
+  }
+}

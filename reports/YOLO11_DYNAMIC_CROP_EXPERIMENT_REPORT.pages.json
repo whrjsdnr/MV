@@ -1,0 +1,269 @@
+{
+  "pages": [
+    {
+      "kind": "text",
+      "title": "1. 연구 배경과 목적",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "2. 기존 CenterCrop의 한계",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "3. YOLO11 사전학습 모델 소개",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "4. 실험 환경",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "5. 데이터 표본 선정",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "5. 데이터 표본 선정",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "5. 데이터 표본 선정",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "6. 제품 BBox 추정 방식",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "7. Dynamic Crop 알고리즘",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "8. Margin 및 Fallback 정책",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "9. 평가 지표 정의",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "10. 제품 검출 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "10. 제품 검출 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "10. 제품 검출 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "10. 제품 검출 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "11. CenterCrop 비교 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "11. CenterCrop 비교 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "12. 결함 마스크 보존율",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "12. 결함 마스크 보존율",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "13. 작은 결함 분석",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "13. 작은 결함 분석",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "14. 카테고리·시점·배경별 결과",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "15. 오프라인 구축 비용 및 메모리",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "15. 오프라인 구축 비용 및 메모리",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "15. 오프라인 구축 비용 및 메모리",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "15. 오프라인 구축 비용 및 메모리",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "선언 제품 5시점 YOLO 구축 비용 합계(ms)",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "선언 제품 5시점 YOLO 구축 비용 합계(ms)",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "16. 실패 사례 분석",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "17. 모델별 전처리 충돌 위험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "18. 최종 정책 제안과 판정",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "table",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "figure",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/hybrid_anchor_tradeoff.png"
+    },
+    {
+      "kind": "text",
+      "title": "후속 제안: YOLO와 Center896 결합 실험",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "19. 분석 한계",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "text",
+      "title": "20. 재현 방법 및 근거 파일",
+      "source": "reports/YOLO11_DYNAMIC_CROP_EXPERIMENT_REPORT.md"
+    },
+    {
+      "kind": "figure",
+      "title": "category_detection",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/category_detection.png"
+    },
+    {
+      "kind": "figure",
+      "title": "background_view_detection",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/background_view_detection.png"
+    },
+    {
+      "kind": "figure",
+      "title": "coco_classes",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/coco_classes.png"
+    },
+    {
+      "kind": "figure",
+      "title": "policy_availability",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/policy_availability.png"
+    },
+    {
+      "kind": "figure",
+      "title": "margin_retention",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/margin_retention.png"
+    },
+    {
+      "kind": "figure",
+      "title": "center_vs_dynamic",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/center_vs_dynamic.png"
+    },
+    {
+      "kind": "figure",
+      "title": "small_defect_retention",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/small_defect_retention.png"
+    },
+    {
+      "kind": "figure",
+      "title": "resized_mask_support",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/resized_mask_support.png"
+    },
+    {
+      "kind": "figure",
+      "title": "small_component_survival",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/small_component_survival.png"
+    },
+    {
+      "kind": "figure",
+      "title": "aligned_image_quality",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/aligned_image_quality.png"
+    },
+    {
+      "kind": "figure",
+      "title": "offline_cost",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/offline_cost.png"
+    },
+    {
+      "kind": "figure",
+      "title": "category_failures",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/category_failures.png"
+    },
+    {
+      "kind": "figure",
+      "title": "fallback_effect",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/fallback_effect.png"
+    },
+    {
+      "kind": "figure",
+      "title": "occupancy_unverified",
+      "source": "/home/geonug/MV/outputs/yolo11_dynamic_crop_v1/figures/occupancy_unverified.png"
+    }
+  ]
+}

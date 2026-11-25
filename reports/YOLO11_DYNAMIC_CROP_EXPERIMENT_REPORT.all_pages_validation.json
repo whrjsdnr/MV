@@ -1,0 +1,388 @@
+{
+  "success": true,
+  "pages": 53,
+  "all_pages_rendered": true,
+  "text_out_of_page": [],
+  "pages_rendered": [
+    {
+      "page": 1,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_001.png",
+      "nonwhite_fraction": 0.012511326457913995,
+      "korean": true,
+      "text_characters": 201
+    },
+    {
+      "page": 2,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_002.png",
+      "nonwhite_fraction": 0.012467058164387541,
+      "korean": true,
+      "text_characters": 197
+    },
+    {
+      "page": 3,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_003.png",
+      "nonwhite_fraction": 0.021625061387672662,
+      "korean": true,
+      "text_characters": 433
+    },
+    {
+      "page": 4,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_004.png",
+      "nonwhite_fraction": 0.02665919639213408,
+      "korean": true,
+      "text_characters": 584
+    },
+    {
+      "page": 5,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_005.png",
+      "nonwhite_fraction": 0.07084725363657114,
+      "korean": true,
+      "text_characters": 208
+    },
+    {
+      "page": 6,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_006.png",
+      "nonwhite_fraction": 0.08210661741819011,
+      "korean": true,
+      "text_characters": 300
+    },
+    {
+      "page": 7,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_007.png",
+      "nonwhite_fraction": 0.019942866233667422,
+      "korean": true,
+      "text_characters": 361
+    },
+    {
+      "page": 8,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_008.png",
+      "nonwhite_fraction": 0.02040353316317708,
+      "korean": true,
+      "text_characters": 313
+    },
+    {
+      "page": 9,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_009.png",
+      "nonwhite_fraction": 0.027226383902941766,
+      "korean": true,
+      "text_characters": 435
+    },
+    {
+      "page": 10,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_010.png",
+      "nonwhite_fraction": 0.016465038423495396,
+      "korean": true,
+      "text_characters": 266
+    },
+    {
+      "page": 11,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_011.png",
+      "nonwhite_fraction": 0.0337614907347845,
+      "korean": true,
+      "text_characters": 509
+    },
+    {
+      "page": 12,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_012.png",
+      "nonwhite_fraction": 0.06800439916166919,
+      "korean": true,
+      "text_characters": 258
+    },
+    {
+      "page": 13,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_013.png",
+      "nonwhite_fraction": 0.12753003672884977,
+      "korean": true,
+      "text_characters": 670
+    },
+    {
+      "page": 14,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_014.png",
+      "nonwhite_fraction": 0.10013487995683841,
+      "korean": true,
+      "text_characters": 450
+    },
+    {
+      "page": 15,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_015.png",
+      "nonwhite_fraction": 0.011866669433435012,
+      "korean": true,
+      "text_characters": 166
+    },
+    {
+      "page": 16,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_016.png",
+      "nonwhite_fraction": 0.10016116425611975,
+      "korean": true,
+      "text_characters": 592
+    },
+    {
+      "page": 17,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_017.png",
+      "nonwhite_fraction": 0.01699487456164014,
+      "korean": true,
+      "text_characters": 331
+    },
+    {
+      "page": 18,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_018.png",
+      "nonwhite_fraction": 0.09729202548193647,
+      "korean": true,
+      "text_characters": 516
+    },
+    {
+      "page": 19,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_019.png",
+      "nonwhite_fraction": 0.01206172660178595,
+      "korean": true,
+      "text_characters": 195
+    },
+    {
+      "page": 20,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_020.png",
+      "nonwhite_fraction": 0.09823411010354631,
+      "korean": true,
+      "text_characters": 576
+    },
+    {
+      "page": 21,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_021.png",
+      "nonwhite_fraction": 0.010243959798855942,
+      "korean": true,
+      "text_characters": 153
+    },
+    {
+      "page": 22,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_022.png",
+      "nonwhite_fraction": 0.028937630124573746,
+      "korean": true,
+      "text_characters": 633
+    },
+    {
+      "page": 23,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_023.png",
+      "nonwhite_fraction": 0.06977236413438194,
+      "korean": true,
+      "text_characters": 317
+    },
+    {
+      "page": 24,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_024.png",
+      "nonwhite_fraction": 0.014337393565880213,
+      "korean": true,
+      "text_characters": 235
+    },
+    {
+      "page": 25,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_025.png",
+      "nonwhite_fraction": 0.08825437668167639,
+      "korean": true,
+      "text_characters": 388
+    },
+    {
+      "page": 26,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_026.png",
+      "nonwhite_fraction": 0.017145663436464623,
+      "korean": true,
+      "text_characters": 249
+    },
+    {
+      "page": 27,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_027.png",
+      "nonwhite_fraction": 0.07021089691712837,
+      "korean": true,
+      "text_characters": 256
+    },
+    {
+      "page": 28,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_028.png",
+      "nonwhite_fraction": 0.00841512592254432,
+      "korean": true,
+      "text_characters": 123
+    },
+    {
+      "page": 29,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_029.png",
+      "nonwhite_fraction": 0.016686379891127666,
+      "korean": true,
+      "text_characters": 254
+    },
+    {
+      "page": 30,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_030.png",
+      "nonwhite_fraction": 0.017458308259495202,
+      "korean": true,
+      "text_characters": 326
+    },
+    {
+      "page": 31,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_031.png",
+      "nonwhite_fraction": 0.040046205031368236,
+      "korean": true,
+      "text_characters": 600
+    },
+    {
+      "page": 32,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_032.png",
+      "nonwhite_fraction": 0.023855076674067773,
+      "korean": true,
+      "text_characters": 406
+    },
+    {
+      "page": 33,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_033.png",
+      "nonwhite_fraction": 0.08025841616346067,
+      "korean": true,
+      "text_characters": 398
+    },
+    {
+      "page": 34,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_034.png",
+      "nonwhite_fraction": 0.07035200210274395,
+      "korean": true,
+      "text_characters": 334
+    },
+    {
+      "page": 35,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_035.png",
+      "nonwhite_fraction": 0.019248407378971176,
+      "korean": true,
+      "text_characters": 326
+    },
+    {
+      "page": 36,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_036.png",
+      "nonwhite_fraction": 0.20021442454676877,
+      "korean": true,
+      "text_characters": 195
+    },
+    {
+      "page": 37,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_037.png",
+      "nonwhite_fraction": 0.010974386642042429,
+      "korean": true,
+      "text_characters": 231
+    },
+    {
+      "page": 38,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_038.png",
+      "nonwhite_fraction": 0.018309089525706736,
+      "korean": true,
+      "text_characters": 295
+    },
+    {
+      "page": 39,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_039.png",
+      "nonwhite_fraction": 0.03684505405573655,
+      "korean": true,
+      "text_characters": 880
+    },
+    {
+      "page": 40,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_040.png",
+      "nonwhite_fraction": 0.17781328463821044,
+      "korean": true,
+      "text_characters": 148
+    },
+    {
+      "page": 41,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_041.png",
+      "nonwhite_fraction": 0.18569165750174652,
+      "korean": true,
+      "text_characters": 148
+    },
+    {
+      "page": 42,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_042.png",
+      "nonwhite_fraction": 0.07485630096906061,
+      "korean": true,
+      "text_characters": 144
+    },
+    {
+      "page": 43,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_043.png",
+      "nonwhite_fraction": 0.2410795930083764,
+      "korean": true,
+      "text_characters": 187
+    },
+    {
+      "page": 44,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_044.png",
+      "nonwhite_fraction": 0.04400821730198585,
+      "korean": true,
+      "text_characters": 184
+    },
+    {
+      "page": 45,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_045.png",
+      "nonwhite_fraction": 0.20805682942181458,
+      "korean": true,
+      "text_characters": 223
+    },
+    {
+      "page": 46,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_046.png",
+      "nonwhite_fraction": 0.2263424014165854,
+      "korean": true,
+      "text_characters": 169
+    },
+    {
+      "page": 47,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_047.png",
+      "nonwhite_fraction": 0.1513436118777365,
+      "korean": true,
+      "text_characters": 162
+    },
+    {
+      "page": 48,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_048.png",
+      "nonwhite_fraction": 0.204451730267754,
+      "korean": true,
+      "text_characters": 168
+    },
+    {
+      "page": 49,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_049.png",
+      "nonwhite_fraction": 0.20480449323179292,
+      "korean": true,
+      "text_characters": 181
+    },
+    {
+      "page": 50,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_050.png",
+      "nonwhite_fraction": 0.06943066824372462,
+      "korean": true,
+      "text_characters": 167
+    },
+    {
+      "page": 51,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_051.png",
+      "nonwhite_fraction": 0.14751993802438906,
+      "korean": true,
+      "text_characters": 147
+    },
+    {
+      "page": 52,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_052.png",
+      "nonwhite_fraction": 0.30306350425044787,
+      "korean": true,
+      "text_characters": 172
+    },
+    {
+      "page": 53,
+      "render": "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/page_053.png",
+      "nonwhite_fraction": 0.08644491018378259,
+      "korean": true,
+      "text_characters": 165
+    }
+  ],
+  "contact_sheets": [
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_01.png",
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_02.png",
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_03.png",
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_04.png",
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_05.png",
+    "outputs/yolo11_dynamic_crop_v1/pdf_all_pages/contact_06.png"
+  ],
+  "visual_review": "Pending agent contact-sheet inspection; rendering alone is not visual review"
+}

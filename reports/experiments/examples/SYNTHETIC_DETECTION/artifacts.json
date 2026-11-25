@@ -1,0 +1,12 @@
+{
+  "checkpoints": [
+    {
+      "path": "outputs/experiments/SYNTHETIC_INFRASTRUCTURE_V2/run_20261113T023608_274d81958c664ae2bfbfecb620fbf737/synthetic_checkpoint.bin",
+      "sha256": "702b18d9d885274576226b38b05b66892726908b711da417b8ec7fbc5e07d2e3",
+      "bytes": 41,
+      "epoch": null,
+      "role": "SYNTHETIC_NOT_TRAINED",
+      "time_utc": "2026-11-13T02:36:08.333987+00:00"
+    }
+  ]
+}

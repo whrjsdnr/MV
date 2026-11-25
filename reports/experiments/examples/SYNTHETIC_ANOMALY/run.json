@@ -1,0 +1,12 @@
+{
+  "run_id": "run_20261113T023535_b50b31f688e9449e9f67fc9e19018bd2",
+  "status": "PARTIAL",
+  "created_utc": "2026-11-13T02:35:35.172686+00:00",
+  "config_sha256": "527d872565160fd89833bd50d85e0eb8ecdbe65f9190f0cdd40f4d8160be452f",
+  "training_executed": false,
+  "updated_utc": "2026-11-13T02:35:36.393240+00:00",
+  "evidence": {
+    "scope": "SYNTHETIC_INFRASTRUCTURE_ONLY"
+  },
+  "session_seconds": 1.1987954300129786
+}

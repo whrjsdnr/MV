@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "system": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12400",
+  "logical_cpus": 4,
+  "ram_bytes": 10429767680,
+  "torch_version": "2.15.0+cpu",
+  "cuda_version": null,
+  "gpu": [],
+  "torch_threads": 1
+}

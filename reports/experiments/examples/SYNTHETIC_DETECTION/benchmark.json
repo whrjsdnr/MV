@@ -1,0 +1,130 @@
+{
+  "status": "MEASURED",
+  "device": "cpu",
+  "hardware": {
+    "device_type": "cpu",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12400",
+    "logical_cpus": 4,
+    "torch_threads": 1,
+    "torch_version": "2.15.0+cpu",
+    "cuda_version": null,
+    "gpu": [],
+    "selected_gpu": null
+  },
+  "hardware_sha256": "36b4fb23b79993321ec8089bd317380eccc7c5339fe4dc22d2696e822064bf85",
+  "input_set_sha256": "6bdd3fa86a3d8053559cca0de38f72ae47a8eebf5e229ce633d9b532101e703b",
+  "batch_size": 1,
+  "warmup": 2,
+  "repetitions": 5,
+  "precision": "float32",
+  "input_shapes": [
+    [
+      1,
+      3,
+      24,
+      24
+    ]
+  ],
+  "model_only": {
+    "mean_ms": 0.01613300119061023,
+    "p50_ms": 0.014293007552623749,
+    "p95_ms": 0.02169599465560168,
+    "samples_ms": [
+      0.023204993340186775,
+      0.015659999917261302,
+      0.014293007552623749,
+      0.0136339949676767,
+      0.013873010175302625
+    ],
+    "repetitions": 5,
+    "batch_size": 1,
+    "throughput_images_s": 61984.74717661476,
+    "fps": 61984.74717661476
+  },
+  "end_to_end": {
+    "mean_ms": 0.015865397290326655,
+    "p50_ms": 0.01551299646962434,
+    "p95_ms": 0.017260393360629678,
+    "samples_ms": [
+      0.017557991668581963,
+      0.01607000012882054,
+      0.01551299646962434,
+      0.015068988432176411,
+      0.015117009752430022
+    ],
+    "repetitions": 5,
+    "batch_size": 1,
+    "throughput_images_s": 63030.25267509143,
+    "fps": 63030.25267509143
+  },
+  "stages": {
+    "preprocess": {
+      "mean_ms": 0.00429799547418952,
+      "p50_ms": 0.004278990672901273,
+      "p95_ms": 0.004666991299018264,
+      "samples_ms": [
+        0.004706991603597999,
+        0.004506990080699325,
+        0.004278990672901273,
+        0.003863999154418707,
+        0.0041330058593302965
+      ],
+      "repetitions": 5,
+      "batch_size": 1,
+      "throughput_images_s": 232666.60144368152,
+      "fps": 232666.60144368152
+    },
+    "model": {
+      "mean_ms": 0.010638000094331801,
+      "p50_ms": 0.010490999557077885,
+      "p95_ms": 0.011288211680948734,
+      "samples_ms": [
+        0.011414012988097966,
+        0.010785006452351809,
+        0.010490999557077885,
+        0.010242991265840828,
+        0.010256990208290517
+      ],
+      "repetitions": 5,
+      "batch_size": 1,
+      "throughput_images_s": 94002.6312401356,
+      "fps": 94002.6312401356
+    },
+    "postprocess": {
+      "mean_ms": 0.0003766035661101341,
+      "p50_ms": 0.00037001154851168394,
+      "p95_ms": 0.0004189903847873211,
+      "samples_ms": [
+        0.0004249886842444539,
+        0.0003949971869587898,
+        0.0003440072759985924,
+        0.00037001154851168394,
+        0.0003490131348371506
+      ],
+      "repetitions": 5,
+      "batch_size": 1,
+      "throughput_images_s": 2655312.084080371,
+      "fps": 2655312.084080371
+    }
+  },
+  "parameters": 56,
+  "trainable_parameters": 56,
+  "checkpoint": {
+    "bytes": 41,
+    "sha256": "702b18d9d885274576226b38b05b66892726908b711da417b8ec7fbc5e07d2e3"
+  },
+  "memory_bank_bytes": null,
+  "search_index_bytes": null,
+  "model_load_seconds": 0.00022195199562702328,
+  "peak_cpu_rss_bytes": 525717504,
+  "cpu_rss_baseline_bytes": 525713408,
+  "cpu_rss_delta_bytes": 4096,
+  "rss_measurement": "sampled_process_RSS_5ms_not_exact_model_memory",
+  "gpu_memory": {
+    "model_only": null,
+    "end_to_end": null
+  },
+  "original_model_training": false,
+  "training_executed": false,
+  "subject": "SYNTHETIC_TINY_CONV_NOT_OFFICIAL_MODEL"
+}
